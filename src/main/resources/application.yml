@@ -17,8 +17,6 @@ micronaut:
       swagger-ui:
         paths: classpath:META-INF/swagger/views/swagger-ui
         mapping: /swagger-ui/**
-hello:
-  controller:
     path: "/hello"
   service:
     greeting: "Hello from service"

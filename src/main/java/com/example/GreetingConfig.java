@@ -6,7 +6,7 @@ import lombok.Getter;
 
 import javax.validation.constraints.NotBlank;
 
-@ConfigurationProperties("hello.config.greeting")
+@ConfigurationProperties("micronaut.config.greeting")
 public class GreetingConfig {
 
     @Getter
