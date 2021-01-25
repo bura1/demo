@@ -3,6 +3,8 @@ micronaut:
     name: demo
   server:
     port: 8080
+    netty:
+      log-level: TRACE
   router:
     static-resources:
       swagger:
@@ -17,6 +19,14 @@ micronaut:
       swagger-ui:
         paths: classpath:META-INF/swagger/views/swagger-ui
         mapping: /swagger-ui/**
+  security:
+    authentication: bearer
+    token:
+      jwt:
+        signatures:
+          secret:
+            generator:
+              secret: changeThisSecretToALongerSecureString
     path: "/hello"
   service:
     greeting: "Hello from service"
